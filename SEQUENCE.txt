@@ -1,0 +1,150 @@
+SEQUENCE
+
+#to do 
+#make own list and display (al items are integers)
+type([1,2,3,4])		#list
+
+#appending function : add item to existinglist in the end
+ap = [1,2,3,4,5]
+ap.append(14)
+print(ap)		#[1, 2, 3, 4, 5, 14]
+
+#insert function : a list
+ins = [4,5,7,8,]
+ins.insert(2,13)
+print(ins)		#[4, 5, 13, 7, 8]
+
+
+#insert function : in a list it will add the element in the given position
+ins = [4,5,7,8,]
+ins.insert(3,13)
+print(ins)		#[4, 5, 7, 13, 8]
+
+#extend function : will extend the list with 2nd list
+ex1 = [5,6,7,8,9]
+ex2 = [1,3,4,5,2]
+ex1.extend(ex2)
+ex2.extend(ex1)
+print("extende list after adding ex2",ex1)		#extende list after adding ex2 [5, 6, 7, 8, 9, 1, 3, 4, 5, 2]
+print("extende list after adding ex1",ex2)		#extende list after adding ex1 [1, 3, 4, 5, 2, 5, 6, 7, 8, 9, 1, 3, 4, 5, 2]
+
+#to do  assignment [insertion]
+# insert 37 in 8th pos
+ins = [2,3,4,5,6,7,8,9,1]
+ins.insert(8,37)
+print(ins)		#[2, 3, 4, 5, 6, 7, 8, 9, 37, 1]
+
+	
+#sum : sum of any particular ist
+print(sum(ex2))		#65
+
+#count function : number of times a number is repeated more than once
+count1 = [1,3,4,5,2,7,5,8,9,3,5,4,1,2,4,5,6,7,8,9]
+print(count1.count(3))		#2
+
+#indexing : on what position a given number is present .till -1 anology metholodogy of index traversing
+In = [2,4,6,8,9]
+In.index(4)		#1
+
+In[2]		#6
+
+In[2:4]		#[6, 8]
+
+min(In)		#2
+
+dc = [9.1,8.2,7.4,6.5,5.6,4.3,3.1,2.4,11.2,2.4,3.9,4.6,5.5]
+min('dc')		#c
+
+
+print('max of dc is :' ,dc)		#max of dc is : [9.1, 8.2, 7.4, 6.5, 5.6, 4.3, 3.1, 2.4, 11.2, 2.4, 3.9, 4.6, 5.5]
+
+
+#pop 
+pop1 = [2,3,4,5,6,7]
+pop1.pop(4)
+print(pop1)	#[2, 3, 4, 5, 7]
+print(a)		#45
+
+delete = [2,3,4,5]
+del delete[2]
+delete		#[2, 3, 5]
+
+#remove
+
+remove1 = [2,3,4,5,6]
+b = remove1.remove(4)
+print(remove1)		#[2, 3, 5, 6]
+print(b)			#None
+
+#to do ASSIGNMENT SWAPING
+#write swaping function whrer a == c and b == a, c==b
+# a=12 b=3 c=45
+
+a = 12
+b = 3
+c = 45
+
+"""
+temp = a
+a = b
+b = c
+c = temp
+print(a)
+print(b)
+print(c)
+"""
+
+a,b = b,c = c,a
+print(a)		#45
+print(b)		#45
+print(c)		#12
+
+#swaping
+x = 23
+y = 9
+
+temp = x
+print(temp)
+x= y
+y = temp
+print(y)		#9
+print(x)		#23
+
+name = 'dlitHe Institute'
+course = 'python certification'
+
+name.capitalize()		#Dlithe institute
+name.upper()		#DLITHE INSTITUTE
+
+name.lower()		#dlithe institute
+name.strip()		#dlitHe Institute
+
+a = "riya is adya"
+a.split("is")		#['riya ', ' adya']
+
+b = "python"
+c = "language"
+
+#b + c
+b + " "+ c		#python language
+
+
+a*3		#riya is adyariya is adyariya is adya
+
+#replace ele 
+strl.replace('dog','a')		#hello a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				

@@ -1,0 +1,53 @@
+#import
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+#importing the dataset
+
+data = pd.read_csv('salary.csv')
+
+#print (data)
+
+x = data.iloc[:,:-1].values
+y = data.iloc[:,1].values
+
+#spliting the data
+
+from sklearn.model_selection import train_test_split
+x_train,x_test, y_train, y_test = train_test_split(x,y,test_size = 1/3, random_state=0)
+print(x_test)
+
+#filtering the model
+
+from sklearn.linear_model import LinearRegression
+regressor = LinearRegression()
+regressor.fit(x_train,y_train)
+
+y_pred = regressor.predict(x_test)
+print(y_pred)
+
+#visualisating the result
+
+plt.scatter(x_train,y_train,color = 'red')
+plt.plot(x_train, regressor.predict(x_train), color = 'blue')
+plt.title('Salary vs Experience')
+plt.xlabel('yrs of exp')
+plt.ylabel('salary')
+plt.show()
+
+OUTPUT: //scatter plot
+[[ 2. ]
+ [ 7.1]
+ [ 8.7]
+ [ 4.5]
+ [ 4. ]
+ [ 9.5]
+ [10.3]
+ [ 9.6]
+ [ 3. ]
+ [ 4.9]]
+[44920.95597335 41645.33809297 40617.69326776 43315.26093395
+ 43636.39994183 40103.87085515 39590.04844254 40039.64305357
+ 44278.67795759 43058.34972764]

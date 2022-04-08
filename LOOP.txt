@@ -1,0 +1,171 @@
+LOOP
+
+from typing_extensions import get_origin
+#if condition to execute only when if th stmt is true
+#problem 
+
+raining 
+if it is raining too high:
+  not go
+else:
+  go
+--------------------------------------------------------
+if condition:
+  stmt 1
+  stmt 2
+
+stmt3 () #depende to no any block
+else:
+  stmt4
+-----------------------------------------------------
+i=35
+if(i<25):
+  print("i is less than 25")
+
+print("i am not in if block")		#i am not in if block
+--------------------------------------------------------------------------
+
+i=5
+if(i<25):
+  print("i is less than 25")		#i is less than 25
+
+print("i am not in if block")		#i am not in if block
+-------------------------------------------------------------------
+string = 'food'
+
+if string == 'food':
+  print('cake')		#cake
+  string = string*3		#foodfoodfood
+  print(string)
+---------------------------------------------------------------------
+i= 20
+if(i<15): #greater
+  print("i is saller than 15")
+  print("i am in if block")
+
+else:
+  print("i is greater than or equal to 15")		#i is greater than or equal to 15
+  print("i am in else block")			#i am in else block
+------------------------------------------------------------------------
+
+# nested if-else
+
+i=40
+if(i==40):
+  if(i<=15): #less equal
+    print("i is smaller than 15")
+
+  if(i<12):
+    print("i is smaller tha 12 too")
+  
+  else:
+    print("i is greater than 15")		#i is greater than 15
+-------------------------------------------------------------------------------
+
+i=4
+if (i == 40): #less equal
+    if(i<=15):
+      print("i is smaller than 15")
+
+    if(i<12):
+      print("i is smaller tha 12 too")
+  
+    else:
+      print("i is greater than 15")
+
+else:
+    print("i is not 40")		#i is not 40
+-----------------------------------------------------------------
+
+i=20
+if (i ==20):
+  print('i is equal tp 20')
+  print('we are in if block')
+
+elif (i == 15):
+  print('i is 15')
+  print('we are i elif(1) block')
+
+elif (i == 10):
+   print('is is 10')
+   print('we are in elif(2) block')
+
+else:
+  print('i is equal')			#i is equal tp 20
+  print('i is in else block')		#we are in if block
+----------------------------------------------------
+
+L = [1,2,3,4,5,6]
+for var in L:
+  print(var)
+
+print(var)		#1 2 3 4 5 6 6  
+-------------------------------------------------------
+l = ['car','cake','cream']
+for i in l:
+  print(i)		#car	cake	cream
+
+#input methods
+s=str(input())		#adya
+-------------------------------------------------------------------
+s = str(input())
+for i in s:
+  print(i)
+
+world
+w
+o
+r
+l
+d
+----------------------------------------------------------------
+
+dict = dict()
+dict['a']= 234
+dict['b']= 235
+
+for i in dict:
+  print(i,dict[i])
+
+#a 234
+#b 235
+--------------------------------------------------------
+
+for letter in 'whenareyouold':
+  if letter == 'e' or letter == 'w':
+    break
+print('current letter', letter)		#current letter w
+-----------------------------------------------------------
+n = 10
+res = sum(range(1, n + 1))
+print("Sum of first ", n, "numbers is: ", res)		#Sum of first  10 numbers is:  55
+--------------------------------------------------------------------
+
+count = 0
+while (count<3):
+  count = count+1
+  print('redvelvet yummy')
+
+output: redvelvet yummy
+redvelvet yummy
+redvelvet yummy
+------------------------------------------------------------
+
+i = 0
+a = 'riyaadya'
+
+while i<len(a):
+  if a[i] == 'y':
+    i+=1
+    continue
+  print('current letter',a[i])
+  i+=1
+
+output: current letter r
+current letter i
+current letter a
+current letter a
+current letter d
+current letter a
+------------------------------------------------------		
+

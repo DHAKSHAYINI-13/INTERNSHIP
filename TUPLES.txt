@@ -1,0 +1,29 @@
+TUPLE LIST DICTIONARY
+
+#tuple
+this = (('mango','apple','banana','sugarcane','kiwi'))
+this[1]		#apple
+
+tuple1 = (1,2,3,4,5)
+tuple2 = ('abc',3,4,'xyz') 
+tuple3=tuple1 + tuple2
+
+tuple3		#(1, 2, 3, 4, 5, 'abc', 3, 4, 'xyz')
+
+#create a tuple('hello','word')
+
+tuple1 = tuple('hello')
+tu1 = tuple(('hello','bye'))
+print(tuple1)	#('h', 'e', 'l', 'l', 'o')
+print(tu1)		#('hello', 'bye')
+
+TU = tuple("hello",) *3
+print(TU)		#('h', 'e', 'l', 'l', 'o', 'h', 'e', 'l', 'l', 'o', 'h', 'e', 'l', 'l', 'o')
+
+
+#TUPLE UNPACKING
+tuple4 = ("hello","riya","adya")
+a,b,c = tuple4
+print(a)		#hello
+print(b)		#riya
+print(c)		#adya

@@ -1,0 +1,280 @@
+NUMPY
+
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.arange(0,3*np.pi,0.1)
+y = np.sin(x)
+plt.plot(x,y)
+------------------------------------------
+ar = np.array([1,2,3])
+np.exp(ar)		#array([ 2.71828183,  7.3890561 , 20.08553692])
+----------------------------------------------------------
+np.log(ar)		#array([0.        , 0.69314718, 1.09861229])
+
+------------------------------------------------------------
+np.log10(ar)		#array([0.        , 0.30103   , 0.47712125])
+---------------------------------------------------------------------
+!pip install matplotlib 	#installation
+--------------------------------------------------------------------------------
+from matplotlib import matplt as plt
+x = [2017,2018,2019,2020,2021]
+y = [432,341,234,345,363]
+plt.plot(x,y)		#line graph
+------------------------------------------------------------------------
+years = [1950,1955,1960,1975,1890,1985,2000,2005,2010,2015]
+pops = [2.3,3.4,5.6,2.6,6.5,3.9,1.0,2.9,9.0,8.9]
+plt.plot(years,pops, color='pink')
+plt.xlabel("population")
+plt.xlabel("population growth")
+-----------------------------------------------------------------------------------------
+#two graph together
+
+x = [1,6,3]
+y = [5,9,4]
+
+x2 = [1,2,3]
+y2 = [10,14,12]
+
+plt.plot(x,y,label = 'first line')
+plt.plot(x2,y2, label = 'second line')
+plt.xlabel('plot number')
+plt.title('graph yeah')
+plt.legend() #it indicates the different lines
+---------------------------------------------------------------------------------------------
+years = [1950,1955,1960,1975,1890,1985,2000,2005,2010,2015]	#scatter
+pops = [2.3,3.4,5.6,2.6,6.5,3.9,1.0,2.9,9.0,8.9]
+death = [1.2,2.4,3.4,4.5,4.6,6.4,6.3,7.5,8.1,9.3]
+
+plt.plot(years,death, '*', color = 'blue', label = 'death by year') # * is a style of a graph
+plt.ylabel('population in billion')
+plt.xlabel('population state by year')
+plt.title('population growth')
+plt.legend()
+-------------------------------------------------------------------------------------------------
+years = [1950,1955,1960,1975,1890,1985,2000,2005,2010,2015]
+pops = [2.3,3.4,5.6,2.6,6.5,3.9,1.0,2.9,9.0,8.9]
+death = [1.2,2.4,3.4,4.5,4.6,6.4,6.3,7.5,8.1,9.3]
+lines = plt.plot(years,pops,death)
+plt.grid()
+plt.setp(lines,color = 'red', marker = '*')
+---------------------------------------------------------------------------
+#pie chart : % of ele, thae values and labels 
+
+labels = ['dog','cow','tree','birds', 'sun']
+sizes = [23,34,45,56,67]
+plt.pie(sizes,labels = labels,autopct = '%1.1f%%') # %1.1f%% is a formula kind off
+plt.axis('equal')
+--------------------------------------------------------------------------------------------
+korea_scores = (554,536,538)		#bar graph
+canada_scores = (518,523,525)
+china_scores = (413,570,580)
+france_scores = (495,505,499)
+index = np.arange(3)
+bar_width = 0.2
+k1 = plt.bar(index,korea_scores,bar_width,alpha = 0.9,label = 'korea')
+c1 = plt.bar(index+bar_width,canada_scores,bar_width,alpha = 0.9,label = 'Canada')
+ch1 = plt.bar(index+bar_width*2,china_scores,bar_width,alpha = 0.9,label = 'China')
+f1 = plt.bar(index+bar_width*3,france_scores,bar_width,alpha = 0.9,label = 'France')
+plt.xticks(index + 0.3,('Maths','Reading','Science'))
+plt.ylabel('Mean scores in PISA 2021')
+plt.xlabel('Subjects')
+plt.title('Test scores by Country')
+plt.grid(True)
+plt.legend()
+--------------------------------------------------------------------------------------------------
+plt.bar([1,3,5,7,9],[25,2,7,8,2], label = 'example one', color = 'pink')
+plt.bar([2,34,6,8,10],[8,6,2,5,6], label = 'example two', color = 'yellow' )
+plt.legend()
+plt.ylabel('bar width')
+plt.xlabel('bar number')
+plt.title('graph')
+---------------------------------------------------------------------------------------------------
+
+population_age = [2,4,3,5,4,3,45,56,78,98,432,235]		#HISTOGRAM PLOT
+bins = [10,20,30,40,50,60,70.80,90,100]
+plt.hist(population_age,bins,color = 'green')
+------------------------------------------------------------------------------------------
+
+x = [3,4,5,6]	#scatter plot
+y = [7,8,9,10]
+plt.scatter(x,y, label = 'scatter plot',color = 'brown')
+plt.ylabel('y')
+plt.xlabel('x')
+plt.title('Interesting graph')
+plt.legend()
+-------------------------------------------------------------------------------------------
+
+x = [3,4,5,6]
+y = [7,8,9,10]
+plt.bar(x,y, label = 'bar plot',color = 'brown')
+plt.ylabel('y')
+plt.xlabel('x')
+plt.title('Interesting graph')
+plt.legend()
+---------------------------------------------------------------------------------------------
+
+days = [1,2,3,4,5]		#stack plot
+sleeping = [7,8,6,11,7]
+eating = [2,3,4,3,2]
+working = [7,8,7,2,2]
+playing = [4,5,3,2,1]
+plt.stackplot(days,sleeping,eating,working,playing,colors = ['m','c','r','k'])
+-------------------------------------------------------------------------------------------------
+
+from mpl_toolkits.mplot3d import axes3d		#3D plot line
+import matplotlib.pyplot as plt
+from matplotlib import style 
+
+style.use('fivethirtyeight')
+
+fig = plt.figure()
+ax1 = fig.add_subplot(111,projection = '3d')
+x = [1,2,3,4,5,6,7,8,9,10]
+y = [3,4,5,6,7,8,2,1,9,10]
+z = [2,4,10,3,1,5,8,7,6,9]
+
+ax1.plot(x,y,z,c = 'g', marker = 'o')
+
+ax1.set_xlabel('x-axis')
+ax1.set_ylabel('y-axis')
+ax1.set_zlabel('z-axis')
+-------------------------------------------------------------------------------------------------------
+
+from mpl_toolkits.mplot3d import axes3d		#3D scatter plot
+import matplotlib.pyplot as plt
+from matplotlib import style 
+
+style.use('ggplot')
+
+fig = plt.figure()
+ax1 = fig.add_subplot(111,projection = '3d')
+x = [1,2,3,4,5,6,7,8,9,10]
+y = [3,4,5,6,7,8,2,1,9,10]
+z = [2,4,10,3,1,5,8,7,6,9]
+
+ax1.scatter(x,y,z,c = 'g', marker = 'o')
+
+ax1.set_xlabel('x-axis')
+ax1.set_ylabel('y-axis')
+ax1.set_zlabel('z-axis')
+------------------------------------------------------------------------------
+
+from mpl_toolkits.mplot3d import axes3d		#3D bar graph
+import matplotlib.pyplot as plt
+from matplotlib import style 
+
+style.use('fivethirtyeight')
+
+fig = plt.figure()
+ax1 = fig.add_subplot(111,projection = '3d')
+x = [1,2,3,4,5,6,7,8,9,10]
+y = [3,4,5,6,7,8,2,1,9,10]
+z = np.zeros(10)
+
+dx = np.ones(10)
+dy = np.ones(10)
+dz = [1,2,3,4,5,6,7,8,9,10]
+
+ax1.bar3d(x,y,z,dx,dy,dz)
+
+ax1.set_xlabel('x-axis')
+ax1.set_ylabel('y-axis')
+ax1.set_zlabel('z-axis')
+----------------------------------------------------------------------------------
+
+from mpl_toolkits.mplot3d import axes3d		#3D line plot
+import matplotlib.pyplot as plt
+from matplotlib import style
+
+style.use('fivethirtyeight')
+
+fig = plt.figure()
+ax1 = fig.add_subplot(111,projection = '3d')
+
+x,y,z = axes3d.get_test_data()
+ax1.plot_wireframe(x,y,z,rstride = 3,cstride = 3)
+
+ax1.set_xlabel('x-axis')
+ax1.set_ylabel('y-axis')
+ax1.set_zlabel('z-axis')
+-------------------------------------------------------------------------------------
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+data = pd.read_csv('telecom_churn.csv')
+data.head()
+
+OUTPUT:
+State	Account length	Area code	International plan	Voice mail plan	Number vmail messages	Total day minutes	Total day calls	Total day charge	Total eve minutes	Total eve calls	Total eve charge	Total night minutes	Total night calls	Total night charge	Total intl minutes	Total intl calls	Total intl charge	Customer service calls	Churn
+0	KS	128	415	No	Yes	25	265.1	110	45.07	197.4	99	16.78	244.7	91	11.01	10.0	3	2.70	1	False
+1	OH	107	415	No	Yes	26	161.6	123	27.47	195.5	103	16.62	254.4	103	11.45	13.7	3	3.70	1	False
+2	NJ	137	415	No	No	0	243.4	114	41.38	121.2	110	10.30	162.6	104	7.32	12.2	5	3.29	0	False
+3	OH	84	408	Yes	No	0	299.4	71	50.90	61.9	88	5.26	196.9	89	8.86	6.6	7	1.78	2	False
+4	OK	75	415	Yes	No	0	166.7	113	28.34	148.3	122	12.61	186.9	121	8.41	10.1	3	2.73	3	False
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+data.head()
+
+data.tail()
+
+data.columns
+
+data.shape
+
+data.info()
+
+data['Churn'] = data['Churn'].astype('int
+
+data['Churn']
+
+data.describe()
+
+data.describe(include = ['object','bool'])
+
+data['Churn'].value_counts()
+
+data['Churn'].value_counts(normalize = True)
+
+data.sort_values(by = 'Total day charge', ascending = False).tail()
+
+data.sort_values(by = ['Total day charge','Churn'], ascending = [False,True]).head()
+
+data[data['Churn'] == 1].mean()
+
+data[(data['Churn'] == 0) & (data['Voice mail plan'] == 'No')]['Number vmail messages'].max()
+
+data.loc[0:5,'State':'Area code']
+
+data.iloc[5:6,5:4] #index n-1 
+
+data.iloc[0:5,8:15]
+
+data[:2] #before
+
+data[2:] #after
+
+data.apply(np.max)
+
+data[data['State'].apply(lambda state : state[0] == 'W')].head()
+
+data.columns
+
+--------------------------------------------------------------------------------------------
+
+SEABORN
+
+#pie chart between state and account length
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+y = np.array([])
+
+plt.pie(y)
+plt.show()
+--------------------------------------------------------------------------
+sns.countplot(x = 'Customer service calls', hue = 'Churn', data = data)
+pd.crosstab(data['Churn'], data['Customer service calls'], margins = True)
+
+

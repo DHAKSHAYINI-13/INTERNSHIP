@@ -1,0 +1,73 @@
+DATA OPERATORS
+
+#mul
+2*10	#20
+
+a= 35
+b= 65
+
+#multiplivation *
+a*b
+
+#subtraction -
+a-b
+
+#Division /
+a/b
+
+#floor division //
+a//b 
+
+#Addition +
+a+b
+
+#Exponention **
+a**b
+
+#store into a variable and print		#23143171985618148385244286678913597734970588950324139906433544566777271711544017307460308074951171875
+
+
+RELATIONAL OPERATOR
+
+
+#Relation operator
+34==25		#False
+
+2==2		#True
+
+34>45		#False
+
+34!=45		#True
+
+
+ASSIGNMENT OPERATOR
+
+x=12
+x+=2
+print(x)		#14
+
+x*=3
+print(x)		#42
+
+
+LOGICAL OPERATOR : and or not
+
+#and operator
+23>45 and 49 ==49		#False
+
+#and operator
+23<45 and 49 ==49		#True
+
+
+# or operator
+#and operator
+23>45 or 49  !=49 and 2==2	#False
+
+'riya'== 'riya'		#True
+
+# not operator
+not('riya'== 'Riya')		#True
+
+
+
+

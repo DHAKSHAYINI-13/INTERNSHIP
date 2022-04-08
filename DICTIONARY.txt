@@ -1,0 +1,46 @@
+DICTIONARY
+
+#dict
+dict1 = {'name':'adya','age':'22'}
+
+#delete the key
+print(dict1)
+del dict1['name']		#{'number': 3456, 'name': 'adya'}
+print(dict1)		#{'number': 3456}
+
+print(dict1)		#{'age': '22'}
+
+dict1['number'] = 3456
+print(dict1)		#{'number': 3456}
+
+dict1['name']='adya'
+print(dict1)		#{'number': 3456, 'name': 'adya'}
+
+dict1.pop('age')		#22
+
+#create dictionary
+dict=({"Brand":"honor","Model":"iii","year":"2021"})
+print(dict)			#{'Brand': 'honor', 'Model': 'iii', 'year': '2021'}
+
+#copying the key-value pair from one dict to another
+cp = (dict)
+print(cp)		#]
+#copying the key-value pair from one dict to another
+
+cp = (dict)
+print(cp)		#{'Brand': 'honor', 'Model': 'iii', 'year': '2021'}
+
+dict["year"]		#2021
+
+#nested dict
+dict = {'dict3':{1:'get'}, 'dict4':{'name':'for'}}
+
+
+dict['dict3'][1]		#get
+
+dict.clear()
+print(dict)		#{}
+
+
+
+

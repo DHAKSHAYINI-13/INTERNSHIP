@@ -1,0 +1,28 @@
+DATA TYPES
+
+#integer
+#Per-define functions
+type(1)		#int
+
+# value 12.4 and display output
+type(12.4)	#float
+
+type('string')	#str
+
+type("string")	#str
+
+type('2')		#str
+
+type(1j+2)	#complex
+
+#list
+type([1,2,3,4,5,6,])	#list
+
+#tuple
+type((1,2,3,4))	#tuple
+
+type({'name': 'riya'})		#dict
+
+#print
+print('hello i am dhakshayini student under mentor prachi')	#hello i am dhakshayini student under mentor prachi
+

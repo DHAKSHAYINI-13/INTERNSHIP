@@ -1,0 +1,32 @@
+FUNCTION
+
+#how to zip code
+questions = ['name','color','shape']
+answers = ['apple','red','a circle']
+for question, answer in zip(questions,answers):
+  print('What is your {0}? I am {1}.'.format(question,answer))
+
+OUTPUT: What is your name? I am apple.
+What is your color? I am red.
+What is your shape? I am a circle.
+----------------------------------------------------
+
+#square
+def square_value(num):
+  return num**2
+print(square_value(2))		#4
+----------------------------------------------------
+
+# LAMBDA FUNCTIONS : takes args and has only 1 expression deliverd and returned in only one line
+x = lambda a: a + 5 #expression
+print(x(22))		#27
+----------------------------------------------------------
+
+# n= number     x= to assign value     db= lambda     num_double= variable  
+def db(n):
+  return lambda x: x*n
+num_double = db(2)
+print(num_double(6))		#12
+-------------------------------------------------------------------------
+
+
